@@ -53,30 +53,50 @@ const followersArray = [];
 </div>
 
 */
+const createUser = function(userObject){
+  const cardDiv = document.createElement('div');
+  const userImage = document.createElement('img');
+  const cardInfo = document.createElement('div');
+  const name = document.createElement('h3');
+  const userName = document.createElement('p');
+  const userLocation = document.createElement('p');
+  const userProfile = document.createElement('p');
+  const userLink = document.createElement('a');
+  const followers = document.createElement('p');
+  const following = document.createElement('p');
+  const bio = document.createElement('p');
 
-const cardDiv = document.createElement('div');
-const userImage = document.createElement('img');
-const cardInfo = document.createElement('div');
-const name = document.createElement('h3');
-const userName = document.createElement('p');
-const userLocation = document.createElement('p');
-const userProfile = document.createElement('p');
-const userLink = document.createElement('a');
-const followers = document.createElement('p');
-const following = document.createElement('p');
-const bio = document.createElement('p');
+  cardDiv.appendChild(userImage);
+  cardDiv.appendChild(cardInfo);
+  cardInfo.appendChild(name);
+  cardInfo.appendChild(userName);
+  cardInfo.appendChild(userLocation);
+  cardInfo.appendChild(userProfile);
+  userProfile.appendChild(userLink);
+  cardInfo.appendChild(followers);
+  cardInfo.appendChild(following);
+  cardInfo.appendChild(bio);
 
-cardDiv.appendChild(userImage);
-cardDiv.appendChild(cardInfo);
-cardInfo.appendChild(name);
-cardInfo.appendChild(userName);
-cardInfo.appendChild(userLocation);
-cardInfo.appendChild(userProfile);
-userProfile.appendChild(userLink);
-cardInfo.appendChild(followers);
-cardInfo.appendChild(following);
-cardInfo.appendChild(bio);
-// console.log(cardDiv);
+  cardDiv.classList.add('card');
+  cardInfo.classList.add('card-info');
+  name.classList.add('name');
+  userName.classList.add('user-name');
+/*
+  userImage.src = userObject.avatar_url;
+  name.textContent = userObject.name;
+  userName.textContent = userObject.login;
+  userLocation.textContent = `Location: ${userObject.location}`;
+  userProfile.textContent = "Profile: "
+  userLink.href = userObject.url;
+  followers.textContent = `Followers: ${userObject.followers}`;
+  following.textContent = `Following: ${userObject.following}`;
+  bio.textContent = `Bio: ${userObject.bio}`;
+
+
+*/
+  return cardDiv;
+}
+console.log(createUser({}));
 /* List of LS Instructors Github username's: 
   tetondan
   dustinmyers
