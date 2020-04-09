@@ -54,16 +54,29 @@ const followersArray = [];
 
 */
 
-const cardDiv = createELement('div');
-const userImage = createELement('img');
-const cardInfo = createELement('div');
-const name = createELement('h3');
-const userName = createELement('p');
-const userLocation = createELement('p');
-const userProfile = createELement('p');
-const userLink = createELement('a');
+const cardDiv = document.createElement('div');
+const userImage = document.createElement('img');
+const cardInfo = document.createElement('div');
+const name = document.createElement('h3');
+const userName = document.createElement('p');
+const userLocation = document.createElement('p');
+const userProfile = document.createElement('p');
+const userLink = document.createElement('a');
+const followers = document.createElement('p');
+const following = document.createElement('p');
+const bio = document.createElement('p');
 
-
+cardDiv.appendChild(userImage);
+cardDiv.appendChild(cardInfo);
+cardInfo.appendChild(name);
+cardInfo.appendChild(userName);
+cardInfo.appendChild(userLocation);
+cardInfo.appendChild(userProfile);
+userProfile.appendChild(userLink);
+cardInfo.appendChild(followers);
+cardInfo.appendChild(following);
+cardInfo.appendChild(bio);
+// console.log(cardDiv);
 /* List of LS Instructors Github username's: 
   tetondan
   dustinmyers
